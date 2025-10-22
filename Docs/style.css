@@ -1,0 +1,82 @@
+styles.css
+.marquee{
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    border: 2px solid #7743a7;
+    padding: 10px;
+    }
+    .titulo-desplazable{
+    display: inline-block;
+   
+    white-space: nowrap;
+    font-size: 2.5rem;
+    color: #bf3ce7;
+    animation: desplazamiento 10s linear infinite;
+    }
+    @keyframes desplazamiento{
+    0%{
+    transform: translateX(80vw);
+    }
+    100%{
+    transform: translateX(-100vw);
+    }
+    }
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #ecdff1;
+        }
+        #catalogo {
+            display: grid; /*esta propiedad permite trabajar con un contenedor en
+            cuadricula */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /*Significa que quieres que el contenedor de la cuadrícula tenga tantas
+            columnas como sea posible, donde cada
+            columna debe tener un ancho mínimo de 250 píxeles y un ancho máximo de 1
+parte fraccionaria (1fr).*/
+gap: 20px; /* se usa para dar espacio entre las columnas*/
+padding: 20px; /* crea espacio entre el contenido y los bordes */
+}
+.producto-card {
+     background-color: rgb(236, 235, 235);
+     border: 1px solid #d8b8eb;
+     border-radius: 8px;
+     padding: 15px;
+     text-align: center;
+     box-shadow: 0 20px 8px rgba(206, 165, 240, 0.568); /*sombra*/
+    }
+    .producto-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        }
+        .producto-card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            }
+            .producto-card p {
+                color: #666;
+                font-size: 0.9em;
+                }
+                .precio {
+                    font-size: 1.5em;
+                    color: #007BFF;
+                    font-weight: bold;
+                   
+                    padding: 20px;
+                    margin: 10px 0;
+                    }
+                    .btn-comprar {
+                        background-color: #b372d1;
+                        color: rgb(238, 55, 55);
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        }
+                        .btn-comprar:hover {
+                            background-color: #302188;
+                            }
